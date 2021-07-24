@@ -52,7 +52,7 @@ function App() {
         />
 
         <div>How to use this ?</div>
-        <div>Enter your pincode, hit search and carry on with your work. The app will keep seaching and when it finds slot it will aleet you with a beep</div>
+        <div>Enter your pincode, hit search and carry on with your work. The app will keep seaching and when it finds a slot, it will alert you with a beep</div>
 
         <br />
         {centers ? 
