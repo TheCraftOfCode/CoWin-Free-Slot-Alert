@@ -13,18 +13,16 @@ function App() {
     setDate(`${today.getDate()}-${today.getMonth() < 9 ? 0 : null}${today.getMonth() + 1}-${today.getFullYear()}`)
   }, [])
 
-  
 
   const [pin, setPin] = useState();
   const [centers,setCenters] = useState();
   const [date,setDate] = useState();
-  const [flag,setFlag] = useState(false);
+  const [isSearching,setIsSearching] = useState(false);
 
 
   const handlePin = (event) => {
     setPin(event.target.value)
   }
-
 
   const sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -32,12 +30,16 @@ function App() {
 
   const handleClick = async (event) => {
     event.preventDefault();
-    setCenters();
+    setIsSearching(true)
     while(true) 
     {
       const response = await axios.get(`${url}pincode=${pin}&date=${date}`)
       setCenters(response.data.centers)
-      if(response.data.centers.length !== 0) return
+      if(response.data.centers.length !== 0)
+      { 
+        setIsSearching(false)
+        return
+      }
       else await sleep(10000)
     }
   }
@@ -45,16 +47,18 @@ function App() {
 
   return (
     <div className="App">
+
       <Search 
         handlePin = {handlePin}
         handleClick = {handleClick}
         pin = {pin}
+        isSearching = {isSearching}
         />
 
         <div>How to use this ?</div>
         <div>Enter your pincode, hit search and carry on with your work. The app will keep seaching and when it finds a slot, it will alert you with a beep</div>
-
         <br />
+        
         {centers ? 
           centers.length > 0 ? <Slots centers = {centers} /> : <h1>No Slots yet. Searching...</h1>
           : null

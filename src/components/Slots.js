@@ -17,7 +17,6 @@ function Slots(props) {
         {
             for(let j = 0; j < props.centers[i].sessions.length; j++)
             {   
-                
                 if(props.centers[i].sessions[j].available_capacity > 0)
                 {
                     list.push({
@@ -26,8 +25,7 @@ function Slots(props) {
                         age : props.centers[i].sessions[j].min_age_limit,
                         dose1 :props.centers[i].sessions[j].available_capacity_dose1,
                         dose2: props.centers[i].sessions[j].available_capacity_dose2
-                    })
-                    
+                    })  
                 }   
             }
         }
@@ -36,9 +34,8 @@ function Slots(props) {
             setView(list.map( each => <Individual each = {each} />))
             audio.play()
         }
-        
-        
     }, [props.centers])
+    
     return (
         <div className="slot">
             {view ? view : null}
