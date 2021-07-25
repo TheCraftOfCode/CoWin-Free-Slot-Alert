@@ -18,27 +18,28 @@ function App() {
   const [pin, setPin] = useState();
   const [centers,setCenters] = useState();
   const [date,setDate] = useState();
+  const [flag,setFlag] = useState(false);
+
 
   const handlePin = (event) => {
     setPin(event.target.value)
   }
 
-  const handleCenters = (center) => {
-    setCenters(center)
+
+  const sleep = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 
-
-  const search = () => {
-    
-    axios.get(`${url}pincode=${pin}&date=${date}`)
-    .then( (response) =>response?.data.centers ? setCenters(response.data.centers) : null )
-    
-
-  }
-
-  const handleClick = (event) => {
+  const handleClick = async (event) => {
     event.preventDefault();
-    search();
+    setCenters();
+    while(true) 
+    {
+      const response = await axios.get(`${url}pincode=${pin}&date=${date}`)
+      setCenters(response.data.centers)
+      if(response.data.centers.length !== 0) return
+      else await sleep(10000)
+    }
   }
 
 
@@ -46,7 +47,6 @@ function App() {
     <div className="App">
       <Search 
         handlePin = {handlePin}
-        handleCenters = {handleCenters}
         handleClick = {handleClick}
         pin = {pin}
         />
@@ -59,6 +59,7 @@ function App() {
           centers.length > 0 ? <Slots centers = {centers} /> : <h1>No Slots yet. Searching...</h1>
           : null
         }
+        
     </div>
   );
 }

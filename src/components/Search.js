@@ -14,6 +14,7 @@ function Search(props) {
             />
 
             <button 
+            type ="submit"
                 onClick = {props.handleClick}
             >
                 Search Free Slots
