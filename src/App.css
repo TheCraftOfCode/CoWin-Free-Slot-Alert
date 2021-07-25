@@ -14,7 +14,9 @@
 {
   height: 40%;
   width: 100%;
+  flex-direction: column;
   display: flex;
+  flex-wrap: wrap;
   justify-content:center;
   align-items: center;
 }
@@ -23,7 +25,7 @@
 .search input
 {
   width: 60%;
-  margin-right: 2%;
+  margin-bottom: 2%;
   height: 4vh;
   background-color: #f0feff;
   border: 2px solid #003163;
@@ -37,7 +39,7 @@
 
 .search button
 {
-  width: 10%;
+  width: 20vh;
   height: 5vh;
   background-color: #003163;
   color: white;

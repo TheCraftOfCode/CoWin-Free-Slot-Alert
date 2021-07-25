@@ -4,7 +4,7 @@ import "../App.css"
 function Search(props) {
 
     return (
-        <form className="search">
+        <div className="search">
 
             <input 
                 type="number"
@@ -14,14 +14,17 @@ function Search(props) {
             />
 
             { !props.isSearching ? 
-                <button type ="submit" onClick = {props.handleClick}>
+                <button 
+                    onClick = {props.handleClick}
+                    disabled={!props.pin}
+                >
                     Search Free Slots
                 </button> : 
-                <button type ="submit" >
+                <button type ="submit" onClick = {() => window.location.reload()}>
                     Stop Searching
                 </button> 
             }            
-        </form>
+        </div>
     )
 }
 

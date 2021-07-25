@@ -5,13 +5,13 @@ import beep from "./../media/beep.mp3"
 
 function Slots(props) {
 
-    let list = [];
+    let list;
 
     const [view, setView] = useState();
     const audio = new Audio(beep);
     audio.volume = 0.05;
 
-    useEffect(() => {
+    useEffect(async ()=> {
         list = []
         for(let i = 0; i < props.centers.length; i++)
         {
@@ -29,12 +29,12 @@ function Slots(props) {
                 }   
             }
         }
-        if(list) 
+        if(list.length > 0) 
         {
             setView(list.map( each => <Individual each = {each} />))
             audio.play()
         }
-    }, [props.centers])
+    }, [])
     
     return (
         <div className="slot">
