@@ -73,7 +73,12 @@
   padding: 2vh;
   flex-wrap: wrap;
   margin-bottom: 20px;
-  
+}
+
+.loading
+{
+  display: flex;
+  flex-direction: column;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -86,4 +91,20 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.loader {
+  align-self: center;
+  margin-top: 100px;
+  border: 16px solid #f0feff; /* Light grey */
+  border-top: 16px solid #003163; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

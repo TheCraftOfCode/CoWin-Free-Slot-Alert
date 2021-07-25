@@ -60,7 +60,7 @@ function App() {
         <br />
         
         {centers ? 
-          centers.length > 0 ? <Slots centers = {centers} /> : <h1>No Slots yet. Searching...</h1>
+          centers.length > 0 ? <Slots centers = {centers} /> : <div className="loading"><div class="loader"></div><h1>No Slots Yet... Searching</h1></div>
           : null
         }
         
