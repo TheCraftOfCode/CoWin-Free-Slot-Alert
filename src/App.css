@@ -96,8 +96,8 @@ input[type=number] {
 .loader {
   align-self: center;
   margin-top: 100px;
-  border: 16px solid #f0feff; /* Light grey */
-  border-top: 16px solid #003163; /* Blue */
+  border: 16px solid #f0feff;
+  border-top: 16px solid #003163; 
   border-radius: 50%;
   width: 120px;
   height: 120px;
