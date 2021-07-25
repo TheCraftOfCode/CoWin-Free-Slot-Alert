@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/CoWin-Free-Slot-Alert/static/css/main.1d9fe3c7.chunk.css",
+    "main.js": "/CoWin-Free-Slot-Alert/static/js/main.7bce56c2.chunk.js",
+    "main.js.map": "/CoWin-Free-Slot-Alert/static/js/main.7bce56c2.chunk.js.map",
+    "runtime-main.js": "/CoWin-Free-Slot-Alert/static/js/runtime-main.cc398f77.js",
+    "runtime-main.js.map": "/CoWin-Free-Slot-Alert/static/js/runtime-main.cc398f77.js.map",
+    "static/js/2.b3ef5d86.chunk.js": "/CoWin-Free-Slot-Alert/static/js/2.b3ef5d86.chunk.js",
+    "static/js/2.b3ef5d86.chunk.js.map": "/CoWin-Free-Slot-Alert/static/js/2.b3ef5d86.chunk.js.map",
+    "static/js/3.78094d63.chunk.js": "/CoWin-Free-Slot-Alert/static/js/3.78094d63.chunk.js",
+    "static/js/3.78094d63.chunk.js.map": "/CoWin-Free-Slot-Alert/static/js/3.78094d63.chunk.js.map",
+    "index.html": "/CoWin-Free-Slot-Alert/index.html",
+    "static/css/main.1d9fe3c7.chunk.css.map": "/CoWin-Free-Slot-Alert/static/css/main.1d9fe3c7.chunk.css.map",
+    "static/js/2.b3ef5d86.chunk.js.LICENSE.txt": "/CoWin-Free-Slot-Alert/static/js/2.b3ef5d86.chunk.js.LICENSE.txt",
+    "static/media/beep.d8d253fb.mp3": "/CoWin-Free-Slot-Alert/static/media/beep.d8d253fb.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cc398f77.js",
+    "static/js/2.b3ef5d86.chunk.js",
+    "static/css/main.1d9fe3c7.chunk.css",
+    "static/js/main.7bce56c2.chunk.js"
+  ]
+}
